@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+    remoteip:
+      host-header: x-forwarded-host
+      remote-ip-header: x-forwarded-for
+      port-header: x-forwarded-port
+
+spring:
+#  profiles:
+#    active: dev
+  application:
+    name: rsa-crypt-service
+
+myapp:
+  rsa:
+    rsaPublicKey: ${RSA_PUBLIC_KEY}
+    rsaPrivateKey: ${RSA_PRIVATE_KEY}
+    rsaBase64StrDemo: "eU4iwpkAjMuM9wm33jg1pqByZQ/s7Td4Zs73WJUWR6PvKny60CowyXoK4sYXJjhJ1xIr0lrwmaxXeX5p6MXS3CKmA2r0V8iRxiqBwxgQeTKxPfikZljv7uO3zgEsFRxah9u8OEhG0ihQD3JwEcPM6Y29NVwrKbzUN3hooiMqNaU="
